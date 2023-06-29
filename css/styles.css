@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+/* font-family: 'Inter', sans-serif;
+
+font-family: 'Lexend Deca', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --very-dark-blue-main-background: hsl(233, 47%, 7%);
+  --dark-desaturated-blue-card-background: hsl(244, 38%, 16%);
+  --soft-violet-accent: hsl(277, 64%, 61%);
+  --white-main-heading-stats: hsl(0, 0%, 100%);
+  --slightly-transparent-white-main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --slight-tranparent-white-stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+/****************** 1440PX *******************/
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  background-color: var(--very-dark-blue-main-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.card {
+  margin: 30px auto;
+  padding: 0 30px;
+}
+
+.grid {
+  background-color: var(--dark-desaturated-blue-card-background);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  border-radius: 0.425rem;
+  width: 900px;
+}
+
+.img img {
+  max-width: 100%;
+  display: inherit;
+  background-color: var(--soft-violet-accent);
+}
+
+.card .img {
+  background: url("../images/image-header-desktop.jpg")
+  no-repeat center/cover;
+}
+
+.img .overlay{
+    background-color: var(--soft-violet-accent);
+    opacity: 0.5;
+    height: 400px;
+}
+
+.card-content {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: var(--white-main-heading-stats);
+  margin-bottom: 1.5rem;
+  padding-right: 2rem;
+}
+
+span {
+  color: var(--soft-violet-accent);
+}
+
+.info {
+  margin-bottom: 5.5rem;
+  line-height: 1.3rem;
+  font-size: 13px;
+  padding-right: 3rem;
+  color: var(--slightly-transparent-white-main-paragraph);
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 3rem;
+}
+
+.nums {
+  color: var(--white-main-heading-stats);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.stat-tag {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 12px;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  color: var(--slight-tranparent-white-stat-headings);
+}
+
+
+/******************** RESPONSIVENESS ******************/
+@media only screen and (max-width: 905px){
+  .grid{
+    width: 800px;
+    height: 400px;
+  }
+
+  .info{
+    margin-bottom: 4.5rem;
+  }
+}
+
+@media only screen and (max-width: 805px){
+  
+  .grid{
+    width:700px;
+    
+  }
+
+  h1{
+    margin-bottom: .5rem;
+    
+  }
+
+  .info{
+    margin-bottom: 1.5rem;
+  }
+
+  .nums{
+    font-size: 18px;
+  }
+
+  .stat-tag{
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width:715px){
+  .card{
+    margin: 8px auto;
+    padding: 0 8px;
+  }
+  
+  .grid{
+    max-width: 650px;
+    max-height: 350px;
+  }
+
+  h1{
+    font-size:20px;
+    margin-bottom: .9rem;
+  }
+
+  .img{
+    max-height: 350px;
+  }
+
+  .info{
+    margin-bottom: 2.5rem;
+  }
+
+  .nums{
+    font-size: 18px;
+  }
+
+  .stat-tag{
+    font-size: 8px;
+  }
+}
+
+@media only screen and (max-width:655px){
+  .grid{
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 370px;
+    min-height: 770px;
+  }
+
+  .img{
+    min-height: 400px;
+    max-width: 550px;
+  }
+
+  .img .overlay{
+    max-width: 550px;
+    min-height: 240px;
+  }
+
+  .card-content{
+    text-align: center;
+  }
+
+  h1{
+    font-size: 1.8rem;
+    padding-right: 1.5rem;
+  }
+
+  .info{
+    padding-right: 1.5rem;
+  }
+
+  .stats{
+    padding-left: 1.5rem;
+  }
+
+  .nums{
+    font-size: 1.2rem;
+  }
+
+  .stat-tag{
+    font-size: 9px;
+  }
+}
+
+
+
+@media only screen and (max-width:375px){
+  .card{
+    margin: 10px auto;
+    padding: 0 10px;
+  }
+
+  .grid{
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 85vw;
+    min-height: 765px;
+  }
+
+  .img .overlay{
+    max-height: 270px;
+    min-width: 210px;
+  }
+
+  .img{
+    min-height: 270px;
+    max-width: 320px;
+  }
+
+  .card-content{
+    text-align: center;
+  }
+
+  h1{
+    font-size: 1.3rem;
+  }
+
+  .info{
+    text-align: center;
+    font-size: 12px;
+    
+  }
+
+  .stats{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .companies-stat, .templates-stat{
+    margin-bottom: 1.5rem;
+  }
+
+  .stat-tag{
+    font-size: 9px;
+  }
+}
